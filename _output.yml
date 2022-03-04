@@ -1,0 +1,21 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: section
+  config:
+    toc:
+      before: |
+        <li>""</li>
+      after: |
+        <li>""</li>
+    edit: ""
+    download: ["pdf", "epub"]
+bookdown::html_book:
+  css: [css/style.css, css/toc.css]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  toc_depth: 3
+  toc_appendix: yes
